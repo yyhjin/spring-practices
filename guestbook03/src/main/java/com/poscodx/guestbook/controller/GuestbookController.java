@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.poscodx.guestbook.repository.GuestbookRepository;
 import com.poscodx.guestbook.vo.GuestbookVo;
@@ -37,7 +38,7 @@ public class GuestbookController {
 	}
 	
 	@RequestMapping(value="/delete", method=RequestMethod.POST)
-	public String delete(int no, String password) {
+	public String delete(@RequestParam int no, @RequestParam String password) {
 		if(password.equals(guestbookRepository.findPasswordByNo(no))) {
 			guestbookRepository.deleteByNo(no);	
 		}
