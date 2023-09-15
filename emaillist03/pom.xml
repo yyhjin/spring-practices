@@ -5,7 +5,7 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>hellospring</artifactId>
+	<artifactId>emaillist03</artifactId>
 	<packaging>war</packaging>
 
 	<properties>
@@ -27,24 +27,10 @@
 			</plugin>
 		</plugins>
 
-		<finalName>hellospring</finalName>
+		<finalName>emaillist03</finalName>
 	</build>
 
 	<dependencies>
-		<!-- spring context -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${org-springframework-version}</version>
-		</dependency>
-
-		<!-- spring web -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${org-springframework-version}</version>
-		</dependency>
-
 		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -52,6 +38,19 @@
 			<version>${org-springframework-version}</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>3.0.8</version>
+		</dependency>
 
 		<!-- servlet -->
 		<dependency>
