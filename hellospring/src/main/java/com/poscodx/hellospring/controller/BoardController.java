@@ -31,7 +31,7 @@ public class BoardController {
 	 *  /board/view?no=10
 	 */
 	@ResponseBody
-	@RequestMapping("/board/view/{no}")
+	@RequestMapping("/board/view")
 	public String view2(Long no) {
 		return "BoardController.view(" + no + ")";
 	}
