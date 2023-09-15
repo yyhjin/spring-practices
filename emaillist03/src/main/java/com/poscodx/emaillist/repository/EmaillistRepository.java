@@ -27,7 +27,7 @@ public class EmaillistRepository {
 			String sql =
 					"select no, first_name, last_name, email "
 					+ "from emaillist "
-					+ "order by no asc";
+					+ "order by no desc";
 			pstmt = conn.prepareStatement(sql);
 			
 			rs = pstmt.executeQuery();
