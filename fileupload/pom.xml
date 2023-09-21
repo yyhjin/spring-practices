@@ -5,54 +5,47 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>logex</artifactId>
+	<artifactId>fileupload</artifactId>
 	<packaging>war</packaging>
-
+	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 
 		<!-- 변수처럼 사용 -->
-		<org.springframework-version>5.3.25</org.springframework-version>
-		<jcloverslf4j.version>1.7.36</jcloverslf4j.version>
-		<logback.version>1.2.11</logback.version>
+		<org-springframework-version>5.3.25</org-springframework-version>
 	</properties>
-
+	
 	<dependencies>
 		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${org.springframework-version}</version>
-			<!-- JCL 제외 -->
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-jcl</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>${org-springframework-version}</version>
 		</dependency>
-
-		<!-- jstl -->
+		
+		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
+			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
 
-		<!-- Logback -->
+		<!-- fileupload -->
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${jcloverslf4j.version}</version>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.1</version>
 		</dependency>
 		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -62,7 +55,7 @@
 			</plugin>
 		</plugins>
 
-		<finalName>logex</finalName>
+		<finalName>fileupload</finalName>
 	</build>
-
+	
 </project>
