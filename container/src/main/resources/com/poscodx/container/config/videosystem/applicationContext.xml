@@ -104,4 +104,18 @@
 	<bean id="dvdPlayer2" class="com.poscodx.container.videosystem.DVDPlayer"
 		c:dvd-ref="ironMan"/>
 
+	<!-- 14. 빈 주입: 생성자 주입 3 -->
+	<bean id="dvdPlayer3" class="com.poscodx.container.videosystem.DVDPlayer"
+		c:_0-ref="ironMan"/>
+
+	<!-- 15. 빈 주입: 프로퍼티 주입 1 -->
+	<bean id="dvdPlayer4" class="com.poscodx.container.videosystem.DVDPlayer">
+		<property name="dvd" ref="ironMan" />
+	</bean>
+
+	<!-- 16. 빈 주입: 프로퍼티 주입 2: p-namespace -->
+	<bean id="dvdPlayer5" class="com.poscodx.container.videosystem.DVDPlayer"
+		p:dvd-ref="ironMan">
+	</bean>
+   
 </beans>
